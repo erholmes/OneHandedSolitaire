@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">A1 One Handed Solitaire</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="draw">Draw</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="new_game">Play One-Handed Solitaire</string>
+    <string name="help">Help</string>
+    <string name="card_draw_activity">Draw Cards</string>
+    <string name="view_help_activity">How to Play</string>
+    <string name="help_page">Taking a standard, shuffled 52-card deck of playing cards (without Jokers), 
+        hold the deck face down in your hand. Draw from the back of the deck four cards and place them on 
+        top fanned out so that the suit and number can be seen.\r\n \r\n
+        If the first and fourth card are the same suit, discard the two middle cards, placing them on your lap if 
+        seated or in a pocket or elsewhere if standing. If there are previously drawn cards in your hand, rearrange the hand 
+        so that four cards are visible. If there are not enough cards to do this, draw from the back so that four cards are 
+        visible.  \r\n \r\n
+        If the first and fourth card are the same number (or face card) discard all four cards. Again, if there are previously 
+        drawn cards in your hand, rearrange the hand so that four cards are visible. If there are not enough cards to do this,
+        draw from the back so that four cards are visible. \r\n \r\n
+		Repeat the above process of discarding until the first and fourth card are neither the same suit or number, upon which
+		you draw one card from the back of the deck and place it after the fourth card, rearranging the drawn cards so that only 
+		four are visible. \r\n \r\n
+		Continue in this fashion until the end of the deck is reached. If all cards are discarded, you win the game.</string>
+
+</resources>
