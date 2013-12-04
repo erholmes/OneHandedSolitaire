@@ -25,5 +25,6 @@
 		you draw one card from the back of the deck and place it after the fourth card, rearranging the drawn cards so that only 
 		four are visible. \r\n \r\n
 		Continue in this fashion until the end of the deck is reached. If all cards are discarded, you win the game.</string>
+    <string name="todo">TODO</string>
 
 </resources>

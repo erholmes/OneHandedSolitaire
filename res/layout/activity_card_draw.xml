@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CardDrawActivity" >
+    tools:context=".CardDrawActivity"
+    android:background="#00FFFF" >
 
     <Button
         android:id="@+id/drawButton"
@@ -10,7 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:text="@string/draw" />
+        android:text="@string/draw" 
+        android:background="#FFFFFF"/>
 
     <ImageView
         android:id="@+id/cardImage"
