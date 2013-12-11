@@ -10,6 +10,8 @@
     <string name="new_game">Play One-Handed Solitaire</string>
     <string name="help">Help</string>
     <string name="card_draw_activity">Draw Cards</string>
+    <string name="guess_higher_card">Higher</string>
+    <string name="guess_lower_card">Lower</string>
     <string name="view_help_activity">How to Play</string>
     <string name="help_page">Taking a standard, shuffled 52-card deck of playing cards (without Jokers), 
         hold the deck face down in your hand. Draw from the back of the deck four cards and place them on 

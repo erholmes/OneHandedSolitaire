@@ -5,21 +5,33 @@
     tools:context=".CardDrawActivity"
     android:background="#00FFFF" >
 
-    <Button
-        android:id="@+id/drawButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:text="@string/draw" 
-        android:background="#FFFFFF"/>
-
     <ImageView
         android:id="@+id/cardImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="90dp"
         android:src="@drawable/back" />
+
+    <Button
+        android:id="@+id/guessHigher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardImage"
+        android:layout_marginTop="34dp"
+        android:layout_toRightOf="@+id/cardImage"
+        android:background="#FFFFFF"
+        android:text="@string/guess_higher_card" />
+
+    <Button
+        android:id="@+id/guessLower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/guessHigher"
+        android:layout_alignBottom="@+id/guessHigher"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="62dp"
+        android:background="#FFFFFF"
+        android:text="@string/guess_lower_card" />
 
 </RelativeLayout>
