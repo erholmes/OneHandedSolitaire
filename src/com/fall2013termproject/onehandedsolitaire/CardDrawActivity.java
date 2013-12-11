@@ -1,14 +1,20 @@
 package com.fall2013termproject.onehandedsolitaire;
 
 import java.util.Random;
-
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class CardDrawActivity extends Activity implements OnClickListener {
 
@@ -18,6 +24,7 @@ public class CardDrawActivity extends Activity implements OnClickListener {
 	private Button guessHigher;
 	private Button guessLower;
 	private ImageView cardImage;
+	private PopupWindow message;
 	
 	
 	
@@ -79,8 +86,8 @@ public class CardDrawActivity extends Activity implements OnClickListener {
 														R.drawable.diamondsa};	
 	
 	//variable to set the card value
-	private int cardValue = -1;
-	private int previousCardValue = -1;
+	public int cardValue = -1;
+	public int previousCardValue = -1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -91,16 +98,21 @@ public class CardDrawActivity extends Activity implements OnClickListener {
 		guessLower	= (Button)findViewById(R.id.guessLower);
 		cardImage	= (ImageView)findViewById(R.id.cardImage);
 		
-		guessHigher.setOnClickListener(this);
+		guessHigher.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v){ 
+			   drawCard();
+			   compareHighValue(cardValue, previousCardValue);
+			}
+		});
+
 		guessLower.setOnClickListener(this);
 		//drawButton.setOnClickListener(this);	
 	} //end onCreate
 
 	@Override
-	public void onClick(View v) {
-		drawCard();
-		compareCardValue(cardValue, previousCardValue);
-		
+	public void onClick(View w) {
+         drawCard();
 	} //end onClick
 
 	private int drawCard() {
@@ -112,15 +124,30 @@ public class CardDrawActivity extends Activity implements OnClickListener {
         	previousCardValue = cardValue;
         }
 		cardValue = cardDeck[random.nextInt(cardDeck.length)];
+	    String size = Integer.toString(cardDeck.length);
+		Context context = getApplicationContext();
+		CharSequence text = size;
+		int duration = Toast.LENGTH_SHORT;
+
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
 		return cardValue;
 	} //end drawCard
 	
-	private void compareCardValue(int cardValue, int previousCardValue){
+	private void compareHighValue(int cardValue, int previousCardValue){
 	   // If this is not the first draw, compare current card value with previous card value
-	   if ((previousCardValue != -1) && (cardValue != -1)){
-		   
-	   }
-	} //end CompareCardValue
+		
+		Context context = getApplicationContext();
+		CharSequence text = previousCardValue + " " + cardValue;
+		int duration = Toast.LENGTH_SHORT;
+
+		Toast toast = Toast.makeText(context, text, duration);
+		toast.show();
+	 
+	} //end CompareHighValue
+	
+	
+	
 	
 } //end of CardDrawActivity
 
